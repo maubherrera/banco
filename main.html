@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco del Malestar</title>
+    <link rel="shortcut icon" href="/src/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/513a58ae6b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        <header id="main-header">
+            <a  id="logo-header" href="#">
+                <span class="site-name">Banco del Malestar</span>
+                <span class="site-slogan">Tu banco de confianza</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Crédito</a></li>
+                    <li><a href="#">Ahorro</a></li>
+                    <li><a href="#">Inversión</a></li>
+                    <li><a href="#">Seguros</a></li>
+                    <li><a href="index.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <div class="ammount">
+                <h2>Saldos</h2>
+            </div>
+            <div class="colum1" id="balance">
+                <label class="login">Cuenta Master:</label>
+                <input class="login" type="text" name="cantidad1" id="c1" value="5000">
+                <label class="login">Cuenta Platino:</label>
+                <input class="login" type="text" name="cantidad2" id="c2" value="1000">
+            </div>
+        </main>
+    
+        <aside>
+            <div class="welcome">
+                <h1>
+                    Bienvenido Mauricio
+                </h1>
+            </div>
+            <div class="mydata">
+                
+                <div class="photo">
+                    <img src="/src/img/image-profile.jpg" alt="">
+                </div>
+                
+                
+            </div>
+            <p>Recuerda no compartir tus datos bancarios <br> Mantén tu cuenta segura</p>
+
+            <section class="card-img">
+                <img class="card-img" src="src/img/tarjeta.png" alt="">
+            </section>
+            
+
+<div class="quantity">
+    <h2>Realiza tus movimientos aquí</h2>
+    <br>
+    <i class="fa-solid fa-circle-arrow-right"></i>
+                <input type="text" name="" id="cant" placeholder="$ Transferir, $ depósito, $ retiro">
+</div>
+            
+
+        </aside>
+    
+        <section class="section-1">
+            <h2>Panel cuenta Master</h2>
+            <form class="colum2">
+                <div class="btns">
+                <input type="button" value="Transferencia de cuenta Master a Platino" id="btn2" onclick="formula()">
+                <input type="button" value="Depositar a cuenta Master" id="btn4" onclick="formula3()">
+                <input type="button" value="Retirar de cuenta Master" id="btn6" onclick="formula5()">
+                </div>   
+            </form>
+        </section>
+    
+        <section class="section-2">
+            <h2>Panel cuenta Platino</h2>
+            <form class="colum2"> 
+                <div class="btns">
+                <input type="button" value="Transferencia de cuenta Platino a Master" id="btn3" onclick="formula2()">
+                <input type="button" value="Depositar a cuenta Platino" id="btn5" onclick="formula4()">
+                <input type="button" value="Retirar de cuenta Platino" id="btn7" onclick="formula6()">
+                </div>
+                
+            </form>
+        </section>
+    
+        <footer>
+            <div class="rights">
+                <h3>Derechos reservados &copy; 2022 - 2025</h3>
+            </div>
+        </footer>
+    </div>
+    
+
+    <script>
+        function formula() {
+            var cantidadT=parseInt(document.getElementById('cant').value);
+            var cantidad1=parseInt(document.getElementById('c1').value);
+            var cantidad2=parseInt(document.getElementById('c2').value);
+// tranferir de cuenta 1 a 2
+            document.getElementById('c1').value=(cantidad1-cantidadT);
+            document.getElementById('c2').value=(cantidad2+cantidadT);
+        }
+
+        function formula2() {
+            var cantidadT=parseInt(document.getElementById('cant').value);
+            var cantidad1=parseInt(document.getElementById('c1').value);
+            var cantidad2=parseInt(document.getElementById('c2').value);
+// tranferir de cuenta 2 a 1
+            document.getElementById('c1').value=(cantidad1+cantidadT);
+            document.getElementById('c2').value=(cantidad2-cantidadT);
+        }
+
+        function formula3() {
+            var cantidadT=parseInt(document.getElementById('cant').value);
+            var cantidad1=parseInt(document.getElementById('c1').value);
+            var cantidad2=parseInt(document.getElementById('c2').value);
+// Depositar a cuenta master
+            document.getElementById('c1').value=(cantidad1+cantidadT);
+
+        }
+
+        function formula4() {
+            var cantidadT=parseInt(document.getElementById('cant').value);
+            var cantidad1=parseInt(document.getElementById('c1').value);
+            var cantidad2=parseInt(document.getElementById('c2').value);
+// depositar a cuenta Platino
+            document.getElementById('c2').value=(cantidad2+cantidadT);
+
+        }
+
+        function formula5() {
+            var cantidadT=parseInt(document.getElementById('cant').value);
+            var cantidad1=parseInt(document.getElementById('c1').value);
+            var cantidad2=parseInt(document.getElementById('c2').value);
+// Retirar de cuenta Master
+            document.getElementById('c1').value=(cantidad1-cantidadT);
+
+        }
+
+        function formula6() {
+            var cantidadT=parseInt(document.getElementById('cant').value);
+            var cantidad1=parseInt(document.getElementById('c1').value);
+            var cantidad2=parseInt(document.getElementById('c2').value);
+// Retirar de cuenta platino
+            document.getElementById('c2').value=(cantidad2-cantidadT);
+
+        }
+
+        function logout() {
+            window.location.href = "index.html"
+            }
+        
+    </script>
+</body>
+</html>

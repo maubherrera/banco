@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(https://www.bbva.com/wp-content/uploads/2015/12/bbva-banca-tarjetas-1920x1080.jpg)
+}
+
+.login-form {
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+form h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+input.user, input.password{
+    height: 2rem;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label.login-form{
+    margin: 20px;
+    padding: 20px;
+
+}
+
+#c1.login, #c2.login {
+    text-align: center;
+    width: 19.5rem;
+    height: 2.5rem;
+    border-radius: 15px;
+    border: none;
+    margin: 1.5rem;
+    background-color: #FFFFFF;
+}
+
+input.btn{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 20px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background: #56ab2f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.main-container{
+    height: 100vh;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .3fr 2fr 1.5fr .3fr;
+    gap: 1rem;
+    border-radius: 10px;
+    grid-template-areas: 
+        "header header header"
+        "aside main main"
+        "aside section1 section2"
+        "footer footer footer";
+ }   
+
+header {
+    grid-area: header;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-decoration: none;
+}
+header img {
+    width: 3rem;
+    margin-top: 2rem
+}
+
+header #logo-header {
+    float: left;
+    padding: 15px 0 0 20px;
+    text-decoration: none;
+}
+
+span.site-name {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+span.site-slogan{
+    display: block;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: black;
+
+}
+
+nav {
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-right: 20px;
+    color: #F2F2F2;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    color: white;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+}
+
+main {
+    grid-area: main;
+    background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-radius: 1rem;
+    box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+-webkit-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+-moz-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+}
+
+.ammount h2 {
+    padding-top: 2rem;
+    font-size: 70px;
+    text-align: center;
+}
+
+.colum1 {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+main input.login {
+    width: 19.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+aside {
+    grid-area: aside;
+    background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-radius: 1rem;
+    box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+    -webkit-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+    -moz-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+}
+
+.mydata {
+    display: flex;
+    justify-content: center;
+}
+
+aside h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: .2rem;
+}
+.photo img{
+    width: 10rem;
+    border-radius: 5rem;
+    margin: 1.5rem;
+    box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+    -webkit-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+    -moz-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+
+}
+aside p {
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}
+
+section .card-img {
+    width: 300px;
+    
+}
+
+aside .quantity {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+aside input {
+    width: 19.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+section {
+    text-align: center;
+    padding-bottom: .5rem;
+    color: white;
+}
+
+section h2 {
+    padding-bottom: 1rem;
+}
+section.section1 {
+    grid-area: section1;
+    background-color: rgb(189, 44, 80);
+    border-radius: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 33.33fr
+    box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+-webkit-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+-moz-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+}
+
+#btn2, #btn3 {
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    color: white;
+
+}
+
+#btn4, #btn5 {
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    color: white;
+
+}
+
+
+#btn6, #btn7 {
+    background: #f85032;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+section.btns {
+    text-align: center;
+}
+
+section.section2 {
+    grid-area: section2;
+    background-color: rgb(127, 255, 127);
+    border-radius: 1rem;
+    box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+-webkit-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+-moz-box-shadow: 5px 7px 25px -7px rgba(0,0,0,0.93);
+}
+
+section.section3 {
+    grid-area: section3 ;
+    background-color: rgb(127, 255, 127);
+    border-radius: 1rem;
+}
+
+
+footer {
+    grid-area: footer;
+    position: relative;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    text-align: center;
+    justify-content: ;
+}
+
+footer .rights h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
